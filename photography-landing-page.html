@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography by Sanele</title>
+  <style>
+    :root {
+      --bg-light: #f4f4f4;
+      --bg-dark: #1e1e1e;
+      --text-light: #1e1e1e;
+      --text-dark: #f4f4f4;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: url('https://source.unsplash.com/1600x400/?nature,landscape') center/cover no-repeat;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    .toggle-btn {
+      margin: 1rem auto;
+      display: block;
+      padding: 0.5rem 1rem;
+      border: none;
+      background: #333;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .grid-gallery {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      padding: 2rem;
+    }
+
+    .grid-gallery img {
+      width: 100%;
+      border-radius: 8px;
+      transform: scale(1);
+      transition: transform 0.3s;
+    }
+
+    .grid-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background: #eee;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Photography by Sanele</h1>
+    <p>Capturing moments from behind the lens</p>
+  </header>
+
+  <button class="toggle-btn" onclick="toggleTheme()">Toggle Dark/Light Mode</button>
+
+  <section class="grid-gallery">
+    <img src="https://source.unsplash.com/400x300/?sunset" alt="Sunset" />
+    <img src="https://source.unsplash.com/400x300/?wildlife" alt="Wildlife" />
+    <img src="https://source.unsplash.com/400x300/?mountains" alt="Mountains" />
+    <img src="https://source.unsplash.com/400x300/?ocean" alt="Ocean" />
+    <img src="https://source.unsplash.com/400x300/?forest" alt="Forest" />
+    <img src="https://source.unsplash.com/400x300/?night" alt="Night" />
+  </section>
+
+  <footer>
+    &copy; 2025 Sanele Bridgette Mnguni | Front-End Developer & Photographer
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
